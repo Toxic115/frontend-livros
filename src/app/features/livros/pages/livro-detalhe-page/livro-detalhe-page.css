@@ -1,0 +1,31 @@
+.detalhe-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.detalhe-container h1 {
+  margin-top: 0;
+}
+
+.detalhe-container p {
+  margin: 12px 0;
+}
+
+.voltar {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}
+
+.erro {
+  color: red;
+}

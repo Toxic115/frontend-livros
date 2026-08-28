@@ -1,0 +1,12 @@
+<div class="card">
+  <h3>{{ livro.titulo }}</h3>
+  <p><strong>Autor:</strong> {{ livro.autor }}</p>
+  <p><strong>Categoria:</strong> {{ livro.categoria }}</p>
+  <p><strong>Ano:</strong> {{ livro.ano }}</p>
+  <p><strong>Status:</strong> {{ livro.status }}</p>
+
+  <div class="acoes">
+    <a [routerLink]="['/livros', livro._id]">Ver detalhes</a>
+    <button (click)="onExcluir()">Excluir</button>
+  </div>
+</div>

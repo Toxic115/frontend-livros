@@ -1,0 +1,20 @@
+<div class="pagina-livros">
+  <h1>Sistema de Cadastro de Livros</h1>
+
+  <app-formulario-livro (livroCadastrado)="aoCadastrar()"></app-formulario-livro>
+
+  <app-filtro-livros (buscar)="aoFiltrar($event)"></app-filtro-livros>
+
+  <p *ngIf="carregando">Carregando livros...</p>
+  <p class="erro" *ngIf="mensagemErro">{{ mensagemErro }}</p>
+
+  <div class="lista">
+    <app-livro-card
+      *ngFor="let livro of livros"
+      [livro]="livro"
+      (excluir)="aoExcluir($event)">
+    </app-livro-card>
+
+    <p *ngIf="!carregando && livros.length === 0">Nenhum livro cadastrado ainda.</p>
+  </div>
+</div>

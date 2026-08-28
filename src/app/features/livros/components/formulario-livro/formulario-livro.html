@@ -1,0 +1,46 @@
+<p>formulario-livro works!</p>
+<div class="formulario-container">
+  <h2>Cadastrar Novo Livro</h2>
+
+  <form (ngSubmit)="salvarLivro()">
+
+    <div class="campo">
+      <label for="titulo">Título *</label>
+      <input type="text" id="titulo" name="titulo" [(ngModel)]="novoLivro.titulo" />
+    </div>
+
+    <div class="campo">
+      <label for="autor">Autor *</label>
+      <input type="text" id="autor" name="autor" [(ngModel)]="novoLivro.autor" />
+    </div>
+
+    <div class="campo">
+      <label for="categoria">Categoria *</label>
+      <input type="text" id="categoria" name="categoria" [(ngModel)]="novoLivro.categoria" />
+    </div>
+
+    <div class="campo">
+      <label for="ano">Ano *</label>
+      <input type="number" id="ano" name="ano" [(ngModel)]="novoLivro.ano" />
+    </div>
+
+    <div class="campo">
+      <label for="status">Status</label>
+      <select id="status" name="status" [(ngModel)]="novoLivro.status">
+        <option value="disponivel">Disponível</option>
+        <option value="emprestado">Emprestado</option>
+        <option value="indisponivel">Indisponível</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao" [(ngModel)]="novoLivro.descricao"></textarea>
+    </div>
+
+    <p class="erro" *ngIf="mensagemErro">{{ mensagemErro }}</p>
+
+    <button type="submit">Salvar Livro</button>
+
+  </form>
+</div>

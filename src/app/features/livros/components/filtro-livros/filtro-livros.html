@@ -1,0 +1,10 @@
+<div class="filtro-container">
+  <input
+    type="text"
+    placeholder="Buscar por título..."
+    [(ngModel)]="termoBusca"
+    (keyup.enter)="onBuscar()"
+  />
+  <button (click)="onBuscar()">Buscar</button>
+  <button (click)="onLimpar()" class="limpar">Limpar</button>
+</div>

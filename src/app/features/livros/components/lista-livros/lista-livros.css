@@ -1,0 +1,13 @@
+.pagina-livros {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.lista {
+  margin-top: 20px;
+}
+
+.erro {
+  color: red;
+}
