@@ -8,7 +8,7 @@ import { Livro } from '../models/livro';
 })
 export class LivrosService {
 
-  private apiUrl = 'http://localhost:3000/api/livros';
+  private apiUrl = 'https://api-livros-jwft.onrender.com/api/livros';
 
   constructor(private http: HttpClient) { }
 
